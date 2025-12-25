@@ -1,0 +1,1932 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>חלוקא דרבנן - לבוש המצוות</title>
+    
+    <!-- Open Graph / Social Sharing -->
+    <meta property="og:title" content="חלוקא דרבנן">
+    <meta property="og:description" content="רמ״ח מצוות עשה כנגד רמ״ח איברים • שס״ה מצוות לא תעשה כנגד שס״ה גידים">
+    <meta property="og:type" content="website">
+    <meta name="description" content="חלוקא דרבנן - לבוש המצוות. רמ״ח מצוות עשה כנגד רמ״ח איברים, שס״ה מצוות לא תעשה כנגד שס״ה גידים">
+    <meta name="apple-mobile-web-app-title" content="חלוקא דרבנן">
+    <meta name="application-name" content="חלוקא דרבנן">
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --baby-pink: #FDD7E4;
+            --soft-pink: #F5C6D6;
+            --mint: #98D4BB;
+            --mint-dark: #6BB89D;
+            --gold: #D4AF37;
+            --gold-light: #F4E4B4;
+            --cream: #FFF8F0;
+            --text-dark: #4A3728;
+            --negative-red: #E57373;
+            --negative-dark: #C62828;
+        }
+        
+        body {
+            font-family: 'Heebo', sans-serif;
+            background-color: var(--baby-pink);
+            min-height: 100vh;
+            color: var(--text-dark);
+        }
+        
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 15px;
+        }
+        
+        header {
+            text-align: center;
+            padding: 35px 20px 30px;
+            background: var(--cream);
+            border-bottom: 5px solid var(--gold);
+            margin-bottom: 20px;
+            border-radius: 0 0 30px 30px;
+            position: relative;
+        }
+        
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: var(--gold);
+        }
+        
+        h1 {
+            font-size: 3.5rem;
+            color: var(--gold);
+            margin-bottom: 12px;
+            font-weight: 900;
+            letter-spacing: 2px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        h1::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60%;
+            height: 3px;
+            background: var(--gold);
+        }
+        
+        .subtitle {
+            font-size: 0.95rem;
+            color: var(--text-dark);
+            font-weight: 500;
+            margin-top: 15px;
+        }
+        
+        .quote {
+            font-size: 0.95rem;
+            color: var(--cream);
+            margin-top: 15px;
+            background: var(--text-dark);
+            padding: 10px 25px;
+            border-radius: 25px;
+            display: inline-block;
+        }
+        
+        /* Gender Tabs */
+        .gender-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .gender-tab {
+            padding: 10px 30px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            border: 3px solid var(--gold);
+            border-radius: 25px;
+            cursor: pointer;
+            background: var(--cream);
+            color: var(--text-dark);
+            transition: all 0.3s ease;
+        }
+        
+        .gender-tab:hover {
+            transform: scale(1.05);
+        }
+        
+        .gender-tab.active {
+            background: var(--gold);
+            color: white;
+        }
+        
+        /* Gender Content */
+        .gender-content {
+            display: block;
+        }
+        
+        /* Main Tabs */
+        .main-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .main-tab {
+            padding: 12px 30px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            border: 3px solid var(--gold);
+            border-radius: 15px 15px 0 0;
+            cursor: pointer;
+            transition: all 0.3s;
+            background: var(--cream);
+        }
+        
+        .main-tab.positive {
+            border-color: var(--mint-dark);
+        }
+        
+        .main-tab.negative {
+            border-color: var(--negative-red);
+        }
+        
+        .main-tab.active.positive {
+            background: var(--mint);
+            border-bottom-color: var(--mint);
+        }
+        
+        .main-tab.active.negative {
+            background: var(--negative-red);
+            color: white;
+            border-bottom-color: var(--negative-red);
+        }
+        
+        .main-tab:hover:not(.active) {
+            transform: translateY(-3px);
+        }
+        
+        /* Layout */
+        .main-content {
+            display: flex;
+            gap: 25px;
+            align-items: flex-start;
+        }
+        
+        .body-container {
+            flex: 0 0 320px;
+            background: var(--cream);
+            border-radius: 20px;
+            padding: 20px;
+            border: 3px solid var(--gold);
+            position: sticky;
+            top: 20px;
+            text-align: center;
+        }
+        
+        .body-title {
+            text-align: center;
+            font-size: 1.3rem;
+            color: var(--gold);
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+        
+        .body-image-container {
+            position: relative;
+            display: inline-block;
+            margin: 0 auto;
+        }
+        
+        .body-image {
+            width: 250px;
+            height: auto;
+            display: block;
+        }
+        
+        /* Clickable overlay areas */
+        .body-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .body-part {
+            position: absolute;
+            cursor: pointer;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+            z-index: 10;
+        }
+        
+        .body-part:hover {
+            background: rgba(255, 215, 0, 0.4);
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.6);
+        }
+        
+        .body-part.active-positive,
+        .body-part.active-negative {
+            background: gold !important;
+            box-shadow: 0 0 50px gold, 0 0 100px gold, 0 0 150px rgba(255, 215, 0, 0.8), 0 0 200px rgba(255, 215, 0, 0.6), 0 0 250px rgba(255, 215, 0, 0.4) !important;
+            animation: pulseGold 0.6s ease-in-out infinite;
+            z-index: 300 !important;
+            border: 4px solid #FFD700 !important;
+            min-height: 20px !important;
+            min-width: 20px !important;
+        }
+        
+        /* Body part positions - final positions */
+        .part-head { top: 3.3%; left: 34.7%; width: 27.9%; height: 2.6%; border-radius: 30%; }
+        .part-eyes { top: 9.9%; left: 42.7%; width: 15.9%; height: 1.0%; }
+        .part-ears { top: 10.5%; left: 34%; width: 6.7%; height: 3.0%; }
+        .part-ears-right { top: 10.5%; left: 59%; width: 6.0%; height: 3.0%; }
+        .part-mouth { top: 15.4%; left: 41.3%; width: 18.0%; height: 1.0%; }
+        .part-neck { top: 20.8%; left: 38.7%; width: 22.0%; height: 3.1%; border-radius: 30%; }
+        .part-heart { top: 25.0%; left: 46.0%; width: 14.0%; height: 6.0%; }
+        .part-arms { top: 19.3%; left: 65.0%; width: 7.9%; height: 28.9%; border-radius: 30%; }
+        .part-arms-left { top: 18.9%; left: 23.0%; width: 8.6%; height: 30.7%; border-radius: 30%; }
+        .part-hands { top: 53.7%; left: 67.6%; width: 8.0%; height: 6.4%; }
+        .part-hands-left { top: 51.9%; left: 24.4%; width: 8.7%; height: 6.4%; }
+        .part-torso { top: 31.7%; left: 38.4%; width: 23.3%; height: 16.4%; border-radius: 30%; }
+        .part-brit { top: 49.2%; left: 38.7%; width: 23.3%; height: 6.7%; }
+        .part-legs { top: 58.9%; left: 39.8%; width: 21.1%; height: 29.3%; border-radius: 30%; }
+        .part-feet { top: 92.3%; left: 32.4%; width: 41.9%; height: 4.5%; border-radius: 30%; }
+        
+        /* Women's body part positions */
+        .women-active .part-head { top: 0.7%; left: 38.0%; width: 20.6%; height: 2.6%; border-radius: 30%; }
+        .women-active .part-eyes { top: 6.8%; left: 43.4%; width: 11.9%; height: 1.0%; }
+        .women-active .part-ears { top: 6.4%; left: 27.4%; width: 7.3%; height: 5.7%; }
+        .women-active .part-ears-right { top: 7.8%; left: 62.0%; width: 8.0%; height: 3.0%; }
+        .women-active .part-mouth { top: 11.8%; left: 42.0%; width: 9.3%; height: 1.0%; }
+        .women-active .part-neck { top: 16.3%; left: 39.3%; width: 20.6%; height: 4.0%; border-radius: 30%; }
+        .women-active .part-heart { top: 23.2%; left: 43.3%; width: 12.7%; height: 5.1%; }
+        .women-active .part-arms { top: 19.3%; left: 64.4%; width: 9.3%; height: 24.4%; border-radius: 30%; }
+        .women-active .part-arms-left { top: 20.2%; left: 22.3%; width: 9.3%; height: 25.3%; border-radius: 30%; }
+        .women-active .part-hands { top: 50.6%; left: 67.6%; width: 7.3%; height: 6.4%; }
+        .women-active .part-hands-left { top: 49.2%; left: 20.4%; width: 8.0%; height: 6.0%; }
+        .women-active .part-torso { top: 29.5%; left: 40.4%; width: 14.6%; height: 11.1%; border-radius: 30%; }
+        .women-active .part-brit { top: 41.1%; left: 37.3%; width: 19.3%; height: 4.9%; }
+        .women-active .part-legs { top: 54.9%; left: 37.8%; width: 21.8%; height: 28.4%; border-radius: 30%; }
+        .women-active .part-feet { top: 93.2%; left: 35.1%; width: 41.9%; height: 4.5%; border-radius: 30%; }
+        
+        /* Image switching */
+        .body-image.men-image { display: block; }
+        .body-image.women-image { display: none; }
+        .women-active .body-image.men-image { display: none; }
+        .women-active .body-image.women-image { display: block; }
+        
+        @keyframes pulseGold {
+            0%, 100% { 
+                box-shadow: 0 0 50px gold, 0 0 100px gold, 0 0 150px rgba(255, 215, 0, 0.8);
+                transform: scale(1);
+                background: gold;
+            }
+            50% { 
+                box-shadow: 0 0 70px gold, 0 0 140px gold, 0 0 210px rgba(255, 215, 0, 0.8), 0 0 280px rgba(255, 215, 0, 0.6);
+                transform: scale(1.1);
+                background: #FFD700;
+            }
+        }
+        
+        /* Mitzvot Container */
+        .mitzvot-container {
+            flex: 1;
+            background: var(--cream);
+            border-radius: 20px;
+            padding: 20px;
+            border: 3px solid var(--gold);
+        }
+        
+        /* Category Tabs - Horizontal */
+        .category-tabs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 20px;
+            justify-content: center;
+        }
+        
+        .category-tab {
+            padding: 10px 16px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            border: 2px solid var(--mint);
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s;
+            background: white;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        
+        .category-tab:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        
+        .category-tab.active {
+            background: var(--mint);
+            color: white;
+            border-color: var(--mint-dark);
+        }
+        
+        .category-tab.negative-tab {
+            border-color: var(--negative-red);
+        }
+        
+        .category-tab.negative-tab.active {
+            background: var(--negative-red);
+            border-color: var(--negative-dark);
+        }
+        
+        .category-icon {
+            font-size: 1.2rem;
+        }
+        
+        /* Mitzvot Grid */
+        .mitzvot-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 10px;
+            max-height: 450px;
+            overflow-y: auto;
+            padding: 10px;
+        }
+        
+        .mitzvah-item {
+            background: var(--baby-pink);
+            padding: 12px 15px;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .mitzvah-item:hover {
+            background: var(--gold-light);
+            transform: translateX(-3px);
+        }
+        
+        .mitzvah-item.selected {
+            background: var(--mint);
+            border-color: var(--mint-dark);
+            box-shadow: 0 4px 15px rgba(152, 212, 187, 0.5);
+        }
+        
+        .mitzvah-item.negative-item {
+            background: #FFEBEE;
+        }
+        
+        .mitzvah-item.negative-item:hover {
+            background: #FFCDD2;
+        }
+        
+        .mitzvah-item.negative-item.selected {
+            background: var(--negative-red);
+            border-color: var(--negative-dark);
+            color: white;
+        }
+        
+        .mitzvah-number {
+            background: var(--mint);
+            color: white;
+            min-width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.75rem;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+        
+        .negative-item .mitzvah-number {
+            background: var(--negative-red);
+        }
+        
+        .mitzvah-text {
+            flex: 1;
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+        
+        /* Info Panel */
+        .info-panel {
+            background: var(--cream);
+            border-radius: 15px;
+            padding: 20px;
+            margin-top: 20px;
+            border: 3px solid var(--gold);
+            text-align: center;
+        }
+        
+        .info-panel h3 {
+            color: var(--gold);
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+        
+        .info-panel p {
+            line-height: 1.7;
+            font-size: 0.95rem;
+        }
+        
+        .info-panel .source {
+            font-size: 0.85rem;
+            color: var(--mint-dark);
+            margin-top: 10px;
+            font-style: italic;
+        }
+        
+        /* Tracking Section */
+        .tracking-section {
+            background: var(--cream);
+            border-radius: 15px;
+            padding: 20px;
+            margin-top: 20px;
+            border: 3px solid var(--mint);
+        }
+        
+        .tracking-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .tracking-title {
+            color: var(--mint-dark);
+            font-size: 1.2rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .tracking-date {
+            font-size: 0.85rem;
+            color: var(--text-dark);
+            background: var(--gold-light);
+            padding: 5px 12px;
+            border-radius: 15px;
+        }
+        
+        .notebook-container {
+            background: #fafafa;
+            border-radius: 10px;
+            border: 1px solid #e0e0e0;
+            padding: 0;
+            margin-bottom: 15px;
+            overflow: hidden;
+        }
+        
+        .notebook-input-wrapper {
+            position: relative;
+            background: 
+                linear-gradient(transparent 39px, #e0e0e0 39px, #e0e0e0 40px);
+            background-size: 100% 40px;
+        }
+        
+        .notebook-input {
+            width: 100%;
+            min-height: 120px;
+            padding: 10px 15px;
+            border: none;
+            background: transparent;
+            font-family: 'Heebo', sans-serif;
+            font-size: 1rem;
+            line-height: 40px;
+            resize: vertical;
+            color: var(--text-dark);
+            direction: rtl;
+        }
+        
+        .notebook-input:focus {
+            outline: none;
+        }
+        
+        .notebook-input::placeholder {
+            color: #bbb;
+        }
+        
+        .save-btn {
+            background: var(--mint);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-family: 'Heebo', sans-serif;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            width: 100%;
+            margin-bottom: 15px;
+        }
+        
+        .save-btn:hover {
+            background: var(--mint-dark);
+            transform: scale(1.02);
+        }
+        
+        .save-btn:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+            transform: none;
+        }
+        
+        .saved-mitzvot-container {
+            background: #fafafa;
+            border-radius: 10px;
+            border: 1px solid #e0e0e0;
+            min-height: 50px;
+        }
+        
+        .saved-mitzvot-list {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .saved-mitzvah-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 12px 15px;
+            animation: fadeIn 0.3s ease;
+            border-bottom: 1px solid #e8e8e8;
+        }
+        
+        .saved-mitzvah-row:last-child {
+            border-bottom: none;
+        }
+        
+        .saved-mitzvah-row .row-content {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex: 1;
+        }
+        
+        .saved-mitzvah-row .tag-icon {
+            font-size: 1rem;
+        }
+        
+        .saved-mitzvah-row .mitzvah-name {
+            font-size: 0.95rem;
+            color: var(--text-dark);
+        }
+        
+        .saved-mitzvah-row .mitzvah-time {
+            color: #999;
+            font-size: 0.75rem;
+        }
+        
+        .saved-mitzvah-row .delete-btn {
+            background: none;
+            border: none;
+            color: var(--negative-red);
+            cursor: pointer;
+            font-size: 1.2rem;
+            padding: 5px 8px;
+            line-height: 1;
+            transition: all 0.2s;
+            font-weight: bold;
+            opacity: 0.6;
+        }
+        
+        .saved-mitzvah-row:hover .delete-btn {
+            opacity: 1;
+        }
+        
+        .saved-mitzvah-row .delete-btn:hover {
+            transform: scale(1.3);
+            color: var(--negative-dark);
+        }
+        
+        .empty-message {
+            color: #999;
+            font-size: 0.9rem;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .saved-title {
+            font-size: 0.95rem;
+            color: var(--mint-dark);
+            font-weight: 600;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateX(10px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        
+        /* Stats */
+        .stats-bar {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 15px;
+            background: white;
+            border-radius: 12px;
+            margin-top: 15px;
+            border: 2px solid var(--gold);
+        }
+        
+        .stat-item {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: var(--gold);
+        }
+        
+        .stat-number.negative {
+            color: var(--negative-red);
+        }
+        
+        .stat-label {
+            font-size: 0.8rem;
+            color: var(--text-dark);
+        }
+        
+        /* Tab Content */
+        .tab-content {
+            display: none;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+        
+        .category-content {
+            display: none;
+        }
+        
+        .category-content.active {
+            display: block;
+        }
+        
+        /* Scrollbar */
+        .mitzvot-grid::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        .mitzvot-grid::-webkit-scrollbar-track {
+            background: var(--baby-pink);
+            border-radius: 10px;
+        }
+        
+        .mitzvot-grid::-webkit-scrollbar-thumb {
+            background: var(--mint);
+            border-radius: 10px;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+            background: var(--cream);
+            border-top: 4px solid var(--gold);
+        }
+        
+        footer p {
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        
+        @media (max-width: 900px) {
+            .main-content {
+                flex-direction: column;
+            }
+            
+            .body-container {
+                flex: none;
+                width: 100%;
+                position: static;
+            }
+            
+            h1 { font-size: 2.5rem; }
+            
+            .category-tabs {
+                gap: 5px;
+            }
+            
+            .category-tab {
+                padding: 8px 12px;
+                font-size: 0.85rem;
+            }
+            
+            footer p {
+                font-size: 0.85rem;
+                padding: 0 10px;
+            }
+            
+            .tracking-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .notebook-input {
+                min-height: 100px;
+            }
+            
+            .saved-mitzvah-row {
+                padding: 10px 12px;
+            }
+            
+            .saved-mitzvah-row .mitzvah-name {
+                font-size: 0.85rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>חלוקא דרבנן</h1>
+        <p class="subtitle">רמ"ח מצוות עשה כנגד רמ"ח איברים • שס"ה מצוות לא תעשה כנגד שס"ה גידים</p>
+        <p class="quote">"כל אבר ואבר אומר לו לאדם: עשה בי מצווה זו" (מדרש משלי)</p>
+        
+        <!-- Gender Tabs -->
+        <div class="gender-tabs">
+            <div class="gender-tab active" data-gender="men" onclick="switchGender('men')">
+                👨 גברים
+            </div>
+            <div class="gender-tab" data-gender="women" onclick="switchGender('women')">
+                👩 נשים
+            </div>
+        </div>
+    </header>
+    
+    <div class="container">
+        <!-- Main Tabs -->
+        <div class="main-tabs">
+            <div class="main-tab positive active" onclick="switchMainTab('positive')">
+                🌟 רמ"ח מצוות עשה (248)
+            </div>
+            <div class="main-tab negative" onclick="switchMainTab('negative')">
+                🚫 שס"ה מצוות לא תעשה (365)
+            </div>
+        </div>
+        
+        <div class="main-content">
+            <!-- Body Container -->
+            <div class="body-container">
+                <h2 class="body-title" id="body-title">🕯️ איברי האדם 🕯️</h2>
+                <div class="body-image-container">
+                    <img src="data:image/png;base64,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" alt="דמות אדם" class="body-image men-image" id="body-image-men">
+                    <img src="data:image/png;base64,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" alt="דמות אישה" class="body-image women-image" id="body-image-women">
+                    <div class="body-overlay">
+                        <!-- Clickable areas for body parts -->
+                        <div class="body-part part-head" data-part="head" title="ראש"></div>
+                        <div class="body-part part-ears" data-part="ears" title="אוזן שמאל"></div>
+                        <div class="body-part part-ears-right" data-part="ears" title="אוזן ימין"></div>
+                        <div class="body-part part-eyes" data-part="eyes" title="עיניים"></div>
+                        <div class="body-part part-mouth" data-part="mouth" title="פה"></div>
+                        <div class="body-part part-neck" data-part="neck" title="צוואר"></div>
+                        <div class="body-part part-heart" data-part="heart" title="לב"></div>
+                        <div class="body-part part-arms" data-part="arms" title="זרוע ימין"></div>
+                        <div class="body-part part-arms-left" data-part="arms" title="זרוע שמאל"></div>
+                        <div class="body-part part-hands" data-part="hands" title="יד ימין"></div>
+                        <div class="body-part part-hands-left" data-part="hands" title="יד שמאל"></div>
+                        <div class="body-part part-torso" data-part="torso" title="גוף"></div>
+                        <div class="body-part part-brit" data-part="brit" title="ברית"></div>
+                        <div class="body-part part-legs" data-part="legs" title="רגליים"></div>
+                        <div class="body-part part-feet" data-part="feet" title="כפות רגליים"></div>
+                    </div>
+                </div>
+                
+                <div class="stats-bar">
+                    <div class="stat-item">
+                        <div class="stat-number">רמ"ח</div>
+                        <div class="stat-label">מצוות עשה</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">248</div>
+                        <div class="stat-label">איברים</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number negative">שס"ה</div>
+                        <div class="stat-label">לא תעשה</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number negative">365</div>
+                        <div class="stat-label">גידים</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Mitzvot Container -->
+            <div class="mitzvot-container">
+                <!-- MEN'S MITZVOT -->
+                <div class="gender-content men-content active" id="men-mitzvot">
+                <!-- POSITIVE MITZVOT -->
+                <div id="positive-content" class="tab-content active">
+                    <div class="category-tabs" id="positive-tabs">
+                        <div class="category-tab active" data-category="head" onclick="switchCategory(this, 'positive')">
+                            <span class="category-icon">🧠</span> ראש
+                        </div>
+                        <div class="category-tab" data-category="eyes" onclick="switchCategory(this, 'positive')">
+                            <span class="category-icon">👁️</span> עיניים
+                        </div>
+                        <div class="category-tab" data-category="ears" onclick="switchCategory(this, 'positive')">
+                            <span class="category-icon">👂</span> אוזניים
+                        </div>
+                        <div class="category-tab" data-category="mouth" onclick="switchCategory(this, 'positive')">
+                            <span class="category-icon">👄</span> פה
+                        </div>
+                        <div class="category-tab" data-category="heart" onclick="switchCategory(this, 'positive')">
+                            <span class="category-icon">❤️</span> לב
+                        </div>
+                        <div class="category-tab" data-category="hands" onclick="switchCategory(this, 'positive')">
+                            <span class="category-icon">🤲</span> ידיים
+                        </div>
+                        <div class="category-tab" data-category="torso" onclick="switchCategory(this, 'positive')">
+                            <span class="category-icon">👕</span> גוף
+                        </div>
+                        <div class="category-tab" data-category="brit" onclick="switchCategory(this, 'positive')">
+                            <span class="category-icon">✡️</span> ברית
+                        </div>
+                        <div class="category-tab" data-category="feet" onclick="switchCategory(this, 'positive')">
+                            <span class="category-icon">🦶</span> רגליים
+                        </div>
+                    </div>
+                    
+                    <!-- Head -->
+                    <div class="category-content active" data-category="head">
+                        <div class="mitzvot-grid">
+                            <div class="mitzvah-item" data-part="head" data-info="תפילין של ראש מונחות על הראש כנגד המוח, לשעבד את המחשבה לעבודת ה'"><span class="mitzvah-number">א</span><span class="mitzvah-text">תפילין של ראש</span></div>
+                            <div class="mitzvah-item" data-part="head" data-info="להאמין שיש אלוה אחד - יסוד כל היסודות"><span class="mitzvah-number">ב</span><span class="mitzvah-text">מצוות האמונה בה'</span></div>
+                            <div class="mitzvah-item" data-part="head" data-info="שמע ישראל ה' אלהינו ה' אחד"><span class="mitzvah-number">ג</span><span class="mitzvah-text">ייחוד ה'</span></div>
+                            <div class="mitzvah-item" data-part="head" data-info="והגית בו יומם ולילה - ללמוד תורה תמיד"><span class="mitzvah-number">ד</span><span class="mitzvah-text">תלמוד תורה</span></div>
+                            <div class="mitzvah-item" data-part="head" data-info="ללמד תורה לתלמידים - ושננתם לבניך"><span class="mitzvah-number">ה</span><span class="mitzvah-text">ללמד תורה</span></div>
+                            <div class="mitzvah-item" data-part="head" data-info="לזכור מעשה עמלק - זכור את אשר עשה לך עמלק"><span class="mitzvah-number">ו</span><span class="mitzvah-text">זכירת עמלק</span></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Eyes -->
+                    <div class="category-content" data-category="eyes">
+                        <div class="mitzvot-grid">
+                            <div class="mitzvah-item" data-part="eyes" data-info="וראיתם אותו וזכרתם את כל מצוות ה'"><span class="mitzvah-number">א</span><span class="mitzvah-text">ראיית ציצית</span></div>
+                            <div class="mitzvah-item" data-part="eyes" data-info="לקרוא את המגילה - לראות את הנס בכתב"><span class="mitzvah-number">ב</span><span class="mitzvah-text">קריאת מגילה</span></div>
+                            <div class="mitzvah-item" data-part="eyes" data-info="להביט בנרות חנוכה - פרסומי ניסא"><span class="mitzvah-number">ג</span><span class="mitzvah-text">ראיית נרות חנוכה</span></div>
+                            <div class="mitzvah-item" data-part="eyes" data-info="לראות את החמץ ולבערו - בדיקת חמץ"><span class="mitzvah-number">ד</span><span class="mitzvah-text">בדיקת חמץ</span></div>
+                            <div class="mitzvah-item" data-part="eyes" data-info="לראות פני חכם - מפני שיבה תקום"><span class="mitzvah-number">ה</span><span class="mitzvah-text">קימה מפני זקן</span></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Ears -->
+                    <div class="category-content" data-category="ears">
+                        <div class="mitzvot-grid">
+                            <div class="mitzvah-item" data-part="ears" data-info="שמע ישראל - לשמוע ולקבל עול מלכות שמים"><span class="mitzvah-number">א</span><span class="mitzvah-text">קריאת שמע</span></div>
+                            <div class="mitzvah-item" data-part="ears" data-info="לשמוע קול שופר בראש השנה"><span class="mitzvah-number">ב</span><span class="mitzvah-text">שמיעת שופר</span></div>
+                            <div class="mitzvah-item" data-part="ears" data-info="הקהל את העם - לשמוע דברי תורה מפי המלך"><span class="mitzvah-number">ג</span><span class="mitzvah-text">מצוות הקהל</span></div>
+                            <div class="mitzvah-item" data-part="ears" data-info="לשמוע לדברי נביא אמת"><span class="mitzvah-number">ד</span><span class="mitzvah-text">שמיעה לנביא</span></div>
+                            <div class="mitzvah-item" data-part="ears" data-info="לשמוע לדברי חכמים - לא תסור"><span class="mitzvah-number">ה</span><span class="mitzvah-text">שמיעה לחכמים</span></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Mouth -->
+                    <div class="category-content" data-category="mouth">
+                        <div class="mitzvot-grid">
+                            <div class="mitzvah-item" data-part="mouth" data-info="זכור את יום השבת לקדשו - קידוש על היין"><span class="mitzvah-number">א</span><span class="mitzvah-text">קידוש שבת</span></div>
+                            <div class="mitzvah-item" data-part="mouth" data-info="ואכלת ושבעת וברכת - ברכת המזון"><span class="mitzvah-number">ב</span><span class="mitzvah-text">ברכת המזון</span></div>
+                            <div class="mitzvah-item" data-part="mouth" data-info="והגדת לבנך - סיפור יציאת מצרים"><span class="mitzvah-number">ג</span><span class="mitzvah-text">סיפור יציאת מצרים</span></div>
+                            <div class="mitzvah-item" data-part="mouth" data-info="להתוודות על חטאים לפני ה'"><span class="mitzvah-number">ד</span><span class="mitzvah-text">וידוי</span></div>
+                            <div class="mitzvah-item" data-part="mouth" data-info="לקרוא הלל בזמנים קבועים"><span class="mitzvah-number">ה</span><span class="mitzvah-text">אמירת הלל</span></div>
+                            <div class="mitzvah-item" data-part="mouth" data-info="להתפלל לה' בכל יום"><span class="mitzvah-number">ו</span><span class="mitzvah-text">תפילה</span></div>
+                            <div class="mitzvah-item" data-part="mouth" data-info="לקדש את החודש - החודש הזה לכם"><span class="mitzvah-number">ז</span><span class="mitzvah-text">קידוש החודש</span></div>
+                            <div class="mitzvah-item" data-part="mouth" data-info="לברך כהנים את ישראל"><span class="mitzvah-number">ח</span><span class="mitzvah-text">ברכת כהנים</span></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Heart -->
+                    <div class="category-content" data-category="heart">
+                        <div class="mitzvot-grid">
+                            <div class="mitzvah-item" data-part="heart" data-info="ואהבת את ה' אלהיך בכל לבבך"><span class="mitzvah-number">א</span><span class="mitzvah-text">אהבת ה'</span></div>
+                            <div class="mitzvah-item" data-part="heart" data-info="ויראת מאלהיך - יראה פנימית בלב"><span class="mitzvah-number">ב</span><span class="mitzvah-text">יראת ה'</span></div>
+                            <div class="mitzvah-item" data-part="heart" data-info="ואהבת לרעך כמוך - כלל גדול בתורה"><span class="mitzvah-number">ג</span><span class="mitzvah-text">אהבת ישראל</span></div>
+                            <div class="mitzvah-item" data-part="heart" data-info="ואהבתם את הגר - לאהוב את הגר"><span class="mitzvah-number">ד</span><span class="mitzvah-text">אהבת הגר</span></div>
+                            <div class="mitzvah-item" data-part="heart" data-info="והלכת בדרכיו - מה הוא רחום אף אתה"><span class="mitzvah-number">ה</span><span class="mitzvah-text">הליכה בדרכי ה'</span></div>
+                            <div class="mitzvah-item" data-part="heart" data-info="ושבת עד ה' אלהיך - תשובה מעומק הלב"><span class="mitzvah-number">ו</span><span class="mitzvah-text">תשובה</span></div>
+                            <div class="mitzvah-item" data-part="heart" data-info="ובו תדבק - להידבק בה' ובחכמיו"><span class="mitzvah-number">ז</span><span class="mitzvah-text">דבקות בה'</span></div>
+                            <div class="mitzvah-item" data-part="heart" data-info="שמוח תשמח - לשמוח בחגים"><span class="mitzvah-number">ח</span><span class="mitzvah-text">שמחת יום טוב</span></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Hands -->
+                    <div class="category-content" data-category="hands">
+                        <div class="mitzvot-grid">
+                            <div class="mitzvah-item" data-part="hands" data-info="וקשרתם לאות על ידך - תפילין של יד"><span class="mitzvah-number">א</span><span class="mitzvah-text">תפילין של יד</span></div>
+                            <div class="mitzvah-item" data-part="hands" data-info="פתוח תפתח את ידך - מצוות צדקה"><span class="mitzvah-number">ב</span><span class="mitzvah-text">צדקה</span></div>
+                            <div class="mitzvah-item" data-part="hands" data-info="ולקחתם לכם ביום הראשון - נטילת לולב"><span class="mitzvah-number">ג</span><span class="mitzvah-text">נטילת לולב</span></div>
+                            <div class="mitzvah-item" data-part="hands" data-info="כה תברכו - נשיאת כפיים"><span class="mitzvah-number">ד</span><span class="mitzvah-text">נשיאת כפיים</span></div>
+                            <div class="mitzvah-item" data-part="hands" data-info="וכתבו לכם את השירה הזאת"><span class="mitzvah-number">ה</span><span class="mitzvah-text">כתיבת ספר תורה</span></div>
+                            <div class="mitzvah-item" data-part="hands" data-info="להפריש תרומות ומעשרות"><span class="mitzvah-number">ו</span><span class="mitzvah-text">הפרשת תרומה</span></div>
+                            <div class="mitzvah-item" data-part="hands" data-info="לשחוט כראוי לפני אכילה"><span class="mitzvah-number">ז</span><span class="mitzvah-text">שחיטה</span></div>
+                            <div class="mitzvah-item" data-part="hands" data-info="לכסות דם חיה ועוף"><span class="mitzvah-number">ח</span><span class="mitzvah-text">כיסוי הדם</span></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Torso -->
+                    <div class="category-content" data-category="torso">
+                        <div class="mitzvot-grid">
+                            <div class="mitzvah-item" data-part="torso" data-info="ועשו להם ציצית - הציצית מקיפה את הגוף"><span class="mitzvah-number">א</span><span class="mitzvah-text">לבישת ציצית</span></div>
+                            <div class="mitzvah-item" data-part="torso" data-info="בסוכות תשבו שבעת ימים"><span class="mitzvah-number">ב</span><span class="mitzvah-text">ישיבה בסוכה</span></div>
+                            <div class="mitzvah-item" data-part="torso" data-info="וכתבתם על מזוזות ביתך"><span class="mitzvah-number">ג</span><span class="mitzvah-text">מזוזה</span></div>
+                            <div class="mitzvah-item" data-part="torso" data-info="ועשו לי מקדש ושכנתי בתוכם"><span class="mitzvah-number">ד</span><span class="mitzvah-text">בניית מקדש</span></div>
+                            <div class="mitzvah-item" data-part="torso" data-info="ליתן מחצית השקל מדי שנה"><span class="mitzvah-number">ה</span><span class="mitzvah-text">מחצית השקל</span></div>
+                            <div class="mitzvah-item" data-part="torso" data-info="לעשות מעקה לגג - ולא תשים דמים בביתך"><span class="mitzvah-number">ו</span><span class="mitzvah-text">מעקה</span></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Brit -->
+                    <div class="category-content" data-category="brit">
+                        <div class="mitzvot-grid">
+                            <div class="mitzvah-item" data-part="brit" data-info="המול לכם כל זכר - אות ברית קודש"><span class="mitzvah-number">א</span><span class="mitzvah-text">ברית מילה</span></div>
+                            <div class="mitzvah-item" data-part="brit" data-info="פרו ורבו ומלאו את הארץ"><span class="mitzvah-number">ב</span><span class="mitzvah-text">פריה ורביה</span></div>
+                            <div class="mitzvah-item" data-part="brit" data-info="כי יקח איש אשה - מצוות נישואין"><span class="mitzvah-number">ג</span><span class="mitzvah-text">נישואין</span></div>
+                            <div class="mitzvah-item" data-part="brit" data-info="לשמח את אשתו בשנה הראשונה"><span class="mitzvah-number">ד</span><span class="mitzvah-text">שמחת חתן</span></div>
+                            <div class="mitzvah-item" data-part="brit" data-info="פדיון הבן הבכור"><span class="mitzvah-number">ה</span><span class="mitzvah-text">פדיון הבן</span></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Feet -->
+                    <div class="category-content" data-category="feet">
+                        <div class="mitzvot-grid">
+                            <div class="mitzvah-item" data-part="feet" data-info="שלוש פעמים בשנה יראה - עלייה לרגל"><span class="mitzvah-number">א</span><span class="mitzvah-text">עלייה לרגל</span></div>
+                            <div class="mitzvah-item" data-part="feet" data-info="מה יפו פעמייך בנעלים - הליכה לדבר מצווה"><span class="mitzvah-number">ב</span><span class="mitzvah-text">הליכה לבית הכנסת</span></div>
+                            <div class="mitzvah-item" data-part="feet" data-info="ללוות את המת לקבורה"><span class="mitzvah-number">ג</span><span class="mitzvah-text">ליווי המת</span></div>
+                            <div class="mitzvah-item" data-part="feet" data-info="ביקור חולים - הליכה לבקר החולה"><span class="mitzvah-number">ד</span><span class="mitzvah-text">ביקור חולים</span></div>
+                            <div class="mitzvah-item" data-part="feet" data-info="הכנסת אורחים - לרוץ לקראתם"><span class="mitzvah-number">ה</span><span class="mitzvah-text">הכנסת אורחים</span></div>
+                            <div class="mitzvah-item" data-part="feet" data-info="ללוות את האורח בצאתו"><span class="mitzvah-number">ו</span><span class="mitzvah-text">ליווי אורחים</span></div>
+                            <div class="mitzvah-item" data-part="feet" data-info="חליצה - לחלוץ נעלו"><span class="mitzvah-number">ז</span><span class="mitzvah-text">חליצה</span></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- NEGATIVE MITZVOT -->
+                <div id="negative-content" class="tab-content">
+                    <div class="category-tabs" id="negative-tabs">
+                        <div class="category-tab negative-tab active" data-category="head-neg" onclick="switchCategory(this, 'negative')">
+                            <span class="category-icon">🧠</span> ראש
+                        </div>
+                        <div class="category-tab negative-tab" data-category="eyes-neg" onclick="switchCategory(this, 'negative')">
+                            <span class="category-icon">👁️</span> עיניים
+                        </div>
+                        <div class="category-tab negative-tab" data-category="ears-neg" onclick="switchCategory(this, 'negative')">
+                            <span class="category-icon">👂</span> אוזניים
+                        </div>
+                        <div class="category-tab negative-tab" data-category="mouth-neg" onclick="switchCategory(this, 'negative')">
+                            <span class="category-icon">👄</span> פה
+                        </div>
+                        <div class="category-tab negative-tab" data-category="heart-neg" onclick="switchCategory(this, 'negative')">
+                            <span class="category-icon">❤️</span> לב
+                        </div>
+                        <div class="category-tab negative-tab" data-category="hands-neg" onclick="switchCategory(this, 'negative')">
+                            <span class="category-icon">🤲</span> ידיים
+                        </div>
+                        <div class="category-tab negative-tab" data-category="torso-neg" onclick="switchCategory(this, 'negative')">
+                            <span class="category-icon">👕</span> גוף
+                        </div>
+                        <div class="category-tab negative-tab" data-category="brit-neg" onclick="switchCategory(this, 'negative')">
+                            <span class="category-icon">✡️</span> עריות
+                        </div>
+                        <div class="category-tab negative-tab" data-category="feet-neg" onclick="switchCategory(this, 'negative')">
+                            <span class="category-icon">🦶</span> רגליים
+                        </div>
+                    </div>
+                    
+                    <!-- Negative - Head -->
+                    <div class="category-content active" data-category="head-neg">
+                        <div class="mitzvot-grid">
+                            <div class="mitzvah-item negative-item" data-part="head" data-type="negative" data-info="לא יהיה לך אלהים אחרים - איסור עבודה זרה"><span class="mitzvah-number">א</span><span class="mitzvah-text">לא יהיה לך אלהים אחרים</span></div>
+                            <div class="mitzvah-item negative-item" data-part="head" data-type="negative" data-info="לא תעשה לך פסל - איסור עשיית פסילים"><span class="mitzvah-number">ב</span><span class="mitzvah-text">לא תעשה לך פסל</span></div>
+                            <div class="mitzvah-item negative-item" data-part="head" data-type="negative" data-info="לא תשתחווה להם - איסור השתחוואה לאלילים"><span class="mitzvah-number">ג</span><span class="mitzvah-text">לא תשתחווה להם</span></div>
+                            <div class="mitzvah-item negative-item" data-part="head" data-type="negative" data-info="לא תקיפו פאת ראשכם - איסור הקפת הראש"><span class="mitzvah-number">ד</span><span class="mitzvah-text">לא תקיפו פאת ראשכם</span></div>
+                            <div class="mitzvah-item negative-item" data-part="head" data-type="negative" data-info="לא תשחית את פאת זקנך"><span class="mitzvah-number">ה</span><span class="mitzvah-text">לא תשחית פאת זקנך</span></div>
+                            <div class="mitzvah-item negative-item" data-part="head" data-type="negative" data-info="לא תתגודדו - איסור גדידה על מת"><span class="mitzvah-number">ו</span><span class="mitzvah-text">לא תתגודדו</span></div>
+                            <div class="mitzvah-item negative-item" data-part="head" data-type="negative" data-info="לא תשימו קרחה - איסור קרחה על מת"><span class="mitzvah-number">ז</span><span class="mitzvah-text">לא תשימו קרחה</span></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Negative - Eyes -->
+                    <div class="category-content" data-category="eyes-neg">
+                        <div class="mitzvot-grid">
+                            <div class="mitzvah-item negative-item" data-part="eyes" data-type="negative" data-info="ולא תתורו אחרי לבבכם ואחרי עיניכם"><span class="mitzvah-number">א</span><span class="mitzvah-text">לא תתורו אחרי עיניכם</span></div>
+                            <div class="mitzvah-item negative-item" data-part="eyes" data-type="negative" data-info="לא תחמוד אשת רעך - איסור להסתכל באשת איש"><span class="mitzvah-number">ב</span><span class="mitzvah-text">לא תחמוד</span></div>
+                            <div class="mitzvah-item negative-item" data-part="eyes" data-type="negative" data-info="השמר לך פן תשכח - לא לשכוח מעמד הר סיני"><span class="mitzvah-number">ג</span><span class="mitzvah-text">לא תשכח מעמד הר סיני</span></div>
+                            <div class="mitzvah-item negative-item" data-part="eyes" data-type="negative" data-info="לא יראה לך חמץ - בפסח"><span class="mitzvah-number">ד</span><span class="mitzvah-text">לא יראה לך חמץ</span></div>
+                            <div class="mitzvah-item negative-item" data-part="eyes" data-type="negative" data-info="לא ימצא לך שאור - בפסח"><span class="mitzvah-number">ה</span><span class="mitzvah-text">לא ימצא לך שאור</span></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Negative - Ears -->
+                    <div class="category-content" data-category="ears-neg">
+                        <div class="mitzvot-grid">
+                            <div class="mitzvah-item negative-item" data-part="ears" data-type="negative" data-info="לא תשמע אל דברי הנביא ההוא - נביא שקר"><span class="mitzvah-number">א</span><span class="mitzvah-text">לא לשמוע לנביא שקר</span></div>
+                            <div class="mitzvah-item negative-item" data-part="ears" data-type="negative" data-info="לא תשא שמע שוא - איסור קבלת לשון הרע"><span class="mitzvah-number">ב</span><span class="mitzvah-text">לא תשא שמע שוא</span></div>
+                            <div class="mitzvah-item negative-item" data-part="ears" data-type="negative" data-info="לא לשמוע לדברי המסית"><span class="mitzvah-number">ג</span><span class="mitzvah-text">לא לשמוע למסית</span></div>
+                            <div class="mitzvah-item negative-item" data-part="ears" data-type="negative" data-info="לא תחוס עינך עליו - על המסית"><span class="mitzvah-number">ד</span><span class="mitzvah-text">לא לחוס על המסית</span></div>
+                            <div class="mitzvah-item negative-item" data-part="ears" data-type="negative" data-info="לא תכסה עליו - על המסית"><span class="mitzvah-number">ה</span><span class="mitzvah-text">לא לכסות על המסית</span></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Negative - Mouth -->
+                    <div class="category-content" data-category="mouth-neg">
+                        <div class="mitzvot-grid">
+                            <div class="mitzvah-item negative-item" data-part="mouth" data-type="negative" data-info="לא תשא את שם ה' לשווא"><span class="mitzvah-number">א</span><span class="mitzvah-text">לא תשא את שם ה' לשווא</span></div>
+                            <div class="mitzvah-item negative-item" data-part="mouth" data-type="negative" data-info="לא תשבעו בשמי לשקר"><span class="mitzvah-number">ב</span><span class="mitzvah-text">לא תשבעו לשקר</span></div>
+                            <div class="mitzvah-item negative-item" data-part="mouth" data-type="negative" data-info="לא תקלל חרש - איסור קללה"><span class="mitzvah-number">ג</span><span class="mitzvah-text">לא תקלל חרש</span></div>
+                            <div class="mitzvah-item negative-item" data-part="mouth" data-type="negative" data-info="אלהים לא תקלל - איסור קללת דיין"><span class="mitzvah-number">ד</span><span class="mitzvah-text">לא תקלל דיין</span></div>
+                            <div class="mitzvah-item negative-item" data-part="mouth" data-type="negative" data-info="ונשיא בעמך לא תאור - איסור קללת נשיא"><span class="mitzvah-number">ה</span><span class="mitzvah-text">לא תקלל נשיא</span></div>
+                            <div class="mitzvah-item negative-item" data-part="mouth" data-type="negative" data-info="לא תלך רכיל בעמיך"><span class="mitzvah-number">ו</span><span class="mitzvah-text">לא תלך רכיל</span></div>
+                            <div class="mitzvah-item negative-item" data-part="mouth" data-type="negative" data-info="הוצאת דיבה - לשון הרע"><span class="mitzvah-number">ז</span><span class="mitzvah-text">איסור לשון הרע</span></div>
+                            <div class="mitzvah-item negative-item" data-part="mouth" data-type="negative" data-info="לא תונו איש את עמיתו - אונאת דברים"><span class="mitzvah-number">ח</span><span class="mitzvah-text">לא תונו בדברים</span></div>
+                            <div class="mitzvah-item negative-item" data-part="mouth" data-type="negative" data-info="מדבר שקר תרחק"><span class="mitzvah-number">ט</span><span class="mitzvah-text">מדבר שקר תרחק</span></div>
+                            <div class="mitzvah-item negative-item" data-part="mouth" data-type="negative" data-info="לא יחל דברו - איסור הפרת נדר"><span class="mitzvah-number">י</span><span class="mitzvah-text">לא יחל דברו</span></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Negative - Heart -->
+                    <div class="category-content" data-category="heart-neg">
+                        <div class="mitzvot-grid">
+                            <div class="mitzvah-item negative-item" data-part="heart" data-type="negative" data-info="לא תתאווה - איסור התאוות"><span class="mitzvah-number">א</span><span class="mitzvah-text">לא תתאווה</span></div>
+                            <div class="mitzvah-item negative-item" data-part="heart" data-type="negative" data-info="לא תשנא את אחיך בלבבך"><span class="mitzvah-number">ב</span><span class="mitzvah-text">לא תשנא בלבבך</span></div>
+                            <div class="mitzvah-item negative-item" data-part="heart" data-type="negative" data-info="לא תקום - איסור נקימה"><span class="mitzvah-number">ג</span><span class="mitzvah-text">לא תקום</span></div>
+                            <div class="mitzvah-item negative-item" data-part="heart" data-type="negative" data-info="לא תטור - איסור נטירה"><span class="mitzvah-number">ד</span><span class="mitzvah-text">לא תטור</span></div>
+                            <div class="mitzvah-item negative-item" data-part="heart" data-type="negative" data-info="ולא תתורו אחרי לבבכם - הרהורי עבירה"><span class="mitzvah-number">ה</span><span class="mitzvah-text">לא תתורו אחרי לבבכם</span></div>
+                            <div class="mitzvah-item negative-item" data-part="heart" data-type="negative" data-info="השמר לך פן יהיה דבר עם לבבך בליעל"><span class="mitzvah-number">ו</span><span class="mitzvah-text">לא להרהר מחשבות רעות</span></div>
+                            <div class="mitzvah-item negative-item" data-part="heart" data-type="negative" data-info="לא תחמוד בית רעך"><span class="mitzvah-number">ז</span><span class="mitzvah-text">לא תחמוד</span></div>
+                            <div class="mitzvah-item negative-item" data-part="heart" data-type="negative" data-info="לא תירא מהם - איסור פחד ממלחמה"><span class="mitzvah-number">ח</span><span class="mitzvah-text">לא תירא מהם</span></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Negative - Hands -->
+                    <div class="category-content" data-category="hands-neg">
+                        <div class="mitzvot-grid">
+                            <div class="mitzvah-item negative-item" data-part="hands" data-type="negative" data-info="לא תרצח"><span class="mitzvah-number">א</span><span class="mitzvah-text">לא תרצח</span></div>
+                            <div class="mitzvah-item negative-item" data-part="hands" data-type="negative" data-info="לא תגנוב"><span class="mitzvah-number">ב</span><span class="mitzvah-text">לא תגנוב</span></div>
+                            <div class="mitzvah-item negative-item" data-part="hands" data-type="negative" data-info="לא תגזול"><span class="mitzvah-number">ג</span><span class="mitzvah-text">לא תגזול</span></div>
+                            <div class="mitzvah-item negative-item" data-part="hands" data-type="negative" data-info="לא תעשוק את רעך"><span class="mitzvah-number">ד</span><span class="mitzvah-text">לא תעשוק</span></div>
+                            <div class="mitzvah-item negative-item" data-part="hands" data-type="negative" data-info="לא תכלא פעולת שכיר - עיכוב משכורת"><span class="mitzvah-number">ה</span><span class="mitzvah-text">לא תלין פעולת שכיר</span></div>
+                            <div class="mitzvah-item negative-item" data-part="hands" data-type="negative" data-info="לא תכה את רעך - איסור הכאה"><span class="mitzvah-number">ו</span><span class="mitzvah-text">לא להכות</span></div>
+                            <div class="mitzvah-item negative-item" data-part="hands" data-type="negative" data-info="לפני עוור לא תתן מכשול"><span class="mitzvah-number">ז</span><span class="mitzvah-text">לפני עוור לא תתן מכשול</span></div>
+                            <div class="mitzvah-item negative-item" data-part="hands" data-type="negative" data-info="לא תעשו עוול במשפט - במידות ובמשקלות"><span class="mitzvah-number">ח</span><span class="mitzvah-text">לא לעוות במידות</span></div>
+                            <div class="mitzvah-item negative-item" data-part="hands" data-type="negative" data-info="לא תקח שוחד"><span class="mitzvah-number">ט</span><span class="mitzvah-text">לא תקח שוחד</span></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Negative - Torso/Body -->
+                    <div class="category-content" data-category="torso-neg">
+                        <div class="mitzvot-grid">
+                            <div class="mitzvah-item negative-item" data-part="torso" data-type="negative" data-info="לא תלבש שעטנז - צמר ופשתים יחדיו"><span class="mitzvah-number">א</span><span class="mitzvah-text">לא תלבש שעטנז</span></div>
+                            <div class="mitzvah-item negative-item" data-part="torso" data-type="negative" data-info="לא יהיה כלי גבר על אשה"><span class="mitzvah-number">ב</span><span class="mitzvah-text">לא ילבש גבר שמלת אשה</span></div>
+                            <div class="mitzvah-item negative-item" data-part="torso" data-type="negative" data-info="לא תעשון אתי - לא תעשו כמות שבמקדש"><span class="mitzvah-number">ג</span><span class="mitzvah-text">לא לעשות שמן המשחה</span></div>
+                            <div class="mitzvah-item negative-item" data-part="torso" data-type="negative" data-info="לא תאכלו על הדם"><span class="mitzvah-number">ד</span><span class="mitzvah-text">לא תאכלו על הדם</span></div>
+                            <div class="mitzvah-item negative-item" data-part="torso" data-type="negative" data-info="לא תאכל חמץ בפסח"><span class="mitzvah-number">ה</span><span class="mitzvah-text">לא לאכול חמץ</span></div>
+                            <div class="mitzvah-item negative-item" data-part="torso" data-type="negative" data-info="לא לאכול ביום הכיפורים"><span class="mitzvah-number">ו</span><span class="mitzvah-text">לא לאכול ביום כיפור</span></div>
+                            <div class="mitzvah-item negative-item" data-part="torso" data-type="negative" data-info="לא תאכל כל נבילה"><span class="mitzvah-number">ז</span><span class="mitzvah-text">לא לאכול נבילה</span></div>
+                            <div class="mitzvah-item negative-item" data-part="torso" data-type="negative" data-info="לא תאכל כל טריפה"><span class="mitzvah-number">ח</span><span class="mitzvah-text">לא לאכול טריפה</span></div>
+                            <div class="mitzvah-item negative-item" data-part="torso" data-type="negative" data-info="לא תאכל חזיר"><span class="mitzvah-number">ט</span><span class="mitzvah-text">לא לאכול חזיר</span></div>
+                            <div class="mitzvah-item negative-item" data-part="torso" data-type="negative" data-info="לא תאכל דם"><span class="mitzvah-number">י</span><span class="mitzvah-text">לא לאכול דם</span></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Negative - Brit/Arayot -->
+                    <div class="category-content" data-category="brit-neg">
+                        <div class="mitzvot-grid">
+                            <div class="mitzvah-item negative-item" data-part="brit" data-type="negative" data-info="לא תנאף"><span class="mitzvah-number">א</span><span class="mitzvah-text">לא תנאף</span></div>
+                            <div class="mitzvah-item negative-item" data-part="brit" data-type="negative" data-info="לא תקרבו לגלות ערווה"><span class="mitzvah-number">ב</span><span class="mitzvah-text">לא לגלות ערווה</span></div>
+                            <div class="mitzvah-item negative-item" data-part="brit" data-type="negative" data-info="לא יבוא ממזר בקהל ה'"><span class="mitzvah-number">ג</span><span class="mitzvah-text">לא יבוא ממזר</span></div>
+                            <div class="mitzvah-item negative-item" data-part="brit" data-type="negative" data-info="לא תהיה קדשה מבנות ישראל"><span class="mitzvah-number">ד</span><span class="mitzvah-text">לא תהיה קדשה</span></div>
+                            <div class="mitzvah-item negative-item" data-part="brit" data-type="negative" data-info="לא יהיה קדש מבני ישראל"><span class="mitzvah-number">ה</span><span class="mitzvah-text">לא יהיה קדש</span></div>
+                            <div class="mitzvah-item negative-item" data-part="brit" data-type="negative" data-info="ערוות אביך לא תגלה"><span class="mitzvah-number">ו</span><span class="mitzvah-text">ערוות אב ואם</span></div>
+                            <div class="mitzvah-item negative-item" data-part="brit" data-type="negative" data-info="ערוות אחותך לא תגלה"><span class="mitzvah-number">ז</span><span class="mitzvah-text">ערוות אחות</span></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Negative - Feet -->
+                    <div class="category-content" data-category="feet-neg">
+                        <div class="mitzvot-grid">
+                            <div class="mitzvah-item negative-item" data-part="feet" data-type="negative" data-info="לא תסוג גבול רעך"><span class="mitzvah-number">א</span><span class="mitzvah-text">לא תסיג גבול</span></div>
+                            <div class="mitzvah-item negative-item" data-part="feet" data-type="negative" data-info="לא תעמוד על דם רעך"><span class="mitzvah-number">ב</span><span class="mitzvah-text">לא תעמוד על דם רעך</span></div>
+                            <div class="mitzvah-item negative-item" data-part="feet" data-type="negative" data-info="לא לצאת מתחום שבת"><span class="mitzvah-number">ג</span><span class="mitzvah-text">לא לצאת מתחום שבת</span></div>
+                            <div class="mitzvah-item negative-item" data-part="feet" data-type="negative" data-info="לא תלך רכיל - הליכה לרכילות"><span class="mitzvah-number">ד</span><span class="mitzvah-text">לא תלך רכיל</span></div>
+                            <div class="mitzvah-item negative-item" data-part="feet" data-type="negative" data-info="לא ללכת בחוקות הגויים"><span class="mitzvah-number">ה</span><span class="mitzvah-text">לא ללכת בחוקותיהם</span></div>
+                            <div class="mitzvah-item negative-item" data-part="feet" data-type="negative" data-info="לא תפנו אל האובות - לא ללכת לקוסמים"><span class="mitzvah-number">ו</span><span class="mitzvah-text">לא ללכת לאובות</span></div>
+                            <div class="mitzvah-item negative-item" data-part="feet" data-type="negative" data-info="לא לשוב מצרימה"><span class="mitzvah-number">ז</span><span class="mitzvah-text">לא לשוב מצרימה</span></div>
+                        </div>
+                    </div>
+                </div>
+                </div><!-- End men-mitzvot -->
+                
+                <!-- WOMEN'S MITZVOT -->
+                <div class="gender-content women-content" id="women-mitzvot" style="display: none;">
+                <!-- POSITIVE MITZVOT - WOMEN -->
+                <div id="positive-content-women" class="tab-content active">
+                    <div class="category-tabs" id="positive-tabs-women">
+                        <div class="category-tab active" data-category="head-w" onclick="switchCategory(this, 'positive-women')">
+                            <span class="category-icon">🧠</span> ראש
+                        </div>
+                        <div class="category-tab" data-category="eyes-w" onclick="switchCategory(this, 'positive-women')">
+                            <span class="category-icon">👁️</span> עיניים
+                        </div>
+                        <div class="category-tab" data-category="ears-w" onclick="switchCategory(this, 'positive-women')">
+                            <span class="category-icon">👂</span> אוזניים
+                        </div>
+                        <div class="category-tab" data-category="mouth-w" onclick="switchCategory(this, 'positive-women')">
+                            <span class="category-icon">👄</span> פה
+                        </div>
+                        <div class="category-tab" data-category="heart-w" onclick="switchCategory(this, 'positive-women')">
+                            <span class="category-icon">❤️</span> לב
+                        </div>
+                        <div class="category-tab" data-category="hands-w" onclick="switchCategory(this, 'positive-women')">
+                            <span class="category-icon">🤲</span> ידיים
+                        </div>
+                        <div class="category-tab" data-category="torso-w" onclick="switchCategory(this, 'positive-women')">
+                            <span class="category-icon">👕</span> גוף
+                        </div>
+                        <div class="category-tab" data-category="home-w" onclick="switchCategory(this, 'positive-women')">
+                            <span class="category-icon">🌸</span> בית ומשפחה
+                        </div>
+                        <div class="category-tab" data-category="feet-w" onclick="switchCategory(this, 'positive-women')">
+                            <span class="category-icon">🦶</span> רגליים
+                        </div>
+                    </div>
+                    
+                    <!-- Head - Women -->
+                    <div class="category-content active" data-category="head-w">
+                        <div class="mitzvot-grid">
+                            <div class="mitzvah-item" data-part="head" data-info="להאמין שיש אלוה אחד - יסוד כל היסודות"><span class="mitzvah-number">א</span><span class="mitzvah-text">אמונה בה'</span></div>
+                            <div class="mitzvah-item" data-part="head" data-info="שמע ישראל ה' אלהינו ה' אחד"><span class="mitzvah-number">ב</span><span class="mitzvah-text">ייחוד ה'</span></div>
+                            <div class="mitzvah-item" data-part="head" data-info="לימוד הלכות הנוגעות לנשים ולבית"><span class="mitzvah-number">ג</span><span class="mitzvah-text">לימוד הלכות</span></div>
+                            <div class="mitzvah-item" data-part="head" data-info="כיסוי ראש לאישה נשואה - סימן צניעות"><span class="mitzvah-number">ד</span><span class="mitzvah-text">כיסוי ראש</span></div>
+                            <div class="mitzvah-item" data-part="head" data-info="לזכור מעשה עמלק - זכור את אשר עשה לך עמלק"><span class="mitzvah-number">ה</span><span class="mitzvah-text">זכירת עמלק</span></div>
+                            <div class="mitzvah-item" data-part="head" data-info="לזכור את יציאת מצרים בכל יום"><span class="mitzvah-number">ו</span><span class="mitzvah-text">זכירת יציאת מצרים</span></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Eyes - Women -->
+                    <div class="category-content" data-category="eyes-w">
+                        <div class="mitzvot-grid">
+                            <div class="mitzvah-item" data-part="eyes" data-info="לקרוא את המגילה - אף הן היו באותו הנס"><span class="mitzvah-number">א</span><span class="mitzvah-text">קריאת מגילה</span></div>
+                            <div class="mitzvah-item" data-part="eyes" data-info="להביט בנרות חנוכה - פרסומי ניסא"><span class="mitzvah-number">ב</span><span class="mitzvah-text">ראיית נרות חנוכה</span></div>
+                            <div class="mitzvah-item" data-part="eyes" data-info="לראות את החמץ ולבערו - בדיקת חמץ"><span class="mitzvah-number">ג</span><span class="mitzvah-text">בדיקת חמץ</span></div>
+                            <div class="mitzvah-item" data-part="eyes" data-info="לראות פני חכם - מפני שיבה תקום"><span class="mitzvah-number">ד</span><span class="mitzvah-text">קימה מפני זקן</span></div>
+                            <div class="mitzvah-item" data-part="eyes" data-info="שמירת העיניים - צניעות הראייה"><span class="mitzvah-number">ה</span><span class="mitzvah-text">שמירת עיניים</span></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Ears - Women -->
+                    <div class="category-content" data-category="ears-w">
+                        <div class="mitzvot-grid">
+                            <div class="mitzvah-item" data-part="ears" data-info="שמע ישראל - לשמוע ולקבל עול מלכות שמים"><span class="mitzvah-number">א</span><span class="mitzvah-text">קריאת שמע</span></div>
+                            <div class="mitzvah-item" data-part="ears" data-info="לשמוע קול שופר - מנהג שקיבלו נשים"><span class="mitzvah-number">ב</span><span class="mitzvah-text">שמיעת שופר (מנהג)</span></div>
+                            <div class="mitzvah-item" data-part="ears" data-info="לשמוע קריאת המגילה - אף הן היו באותו הנס"><span class="mitzvah-number">ג</span><span class="mitzvah-text">שמיעת מגילה</span></div>
+                            <div class="mitzvah-item" data-part="ears" data-info="לשמוע לדברי חכמים - לא תסור"><span class="mitzvah-number">ד</span><span class="mitzvah-text">שמיעה לחכמים</span></div>
+                            <div class="mitzvah-item" data-part="ears" data-info="לשמוע הבדלה - מוצאי שבת"><span class="mitzvah-number">ה</span><span class="mitzvah-text">שמיעת הבדלה</span></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Mouth - Women -->
+                    <div class="category-content" data-category="mouth-w">
+                        <div class="mitzvot-grid">
+                            <div class="mitzvah-item" data-part="mouth" data-info="זכור את יום השבת לקדשו - קידוש על היין"><span class="mitzvah-number">א</span><span class="mitzvah-text">קידוש שבת</span></div>
+                            <div class="mitzvah-item" data-part="mouth" data-info="ואכלת ושבעת וברכת - ברכת המזון"><span class="mitzvah-number">ב</span><span class="mitzvah-text">ברכת המזון</span></div>
+                            <div class="mitzvah-item" data-part="mouth" data-info="והגדת לבנך - סיפור יציאת מצרים"><span class="mitzvah-number">ג</span><span class="mitzvah-text">סיפור יציאת מצרים</span></div>
+                            <div class="mitzvah-item" data-part="mouth" data-info="להתפלל לה' בכל יום"><span class="mitzvah-number">ד</span><span class="mitzvah-text">תפילה</span></div>
+                            <div class="mitzvah-item" data-part="mouth" data-info="לברך על המזון לפני האכילה"><span class="mitzvah-number">ה</span><span class="mitzvah-text">ברכות הנהנין</span></div>
+                            <div class="mitzvah-item" data-part="mouth" data-info="לומר שירה והודאה לה'"><span class="mitzvah-number">ו</span><span class="mitzvah-text">שירה והודאה</span></div>
+                            <div class="mitzvah-item" data-part="mouth" data-info="אכילת מצה בליל פסח"><span class="mitzvah-number">ז</span><span class="mitzvah-text">אכילת מצה</span></div>
+                            <div class="mitzvah-item" data-part="mouth" data-info="ארבע כוסות בליל הסדר"><span class="mitzvah-number">ח</span><span class="mitzvah-text">ארבע כוסות</span></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Heart - Women -->
+                    <div class="category-content" data-category="heart-w">
+                        <div class="mitzvot-grid">
+                            <div class="mitzvah-item" data-part="heart" data-info="ואהבת את ה' אלהיך בכל לבבך"><span class="mitzvah-number">א</span><span class="mitzvah-text">אהבת ה'</span></div>
+                            <div class="mitzvah-item" data-part="heart" data-info="ויראת מאלהיך - יראה פנימית בלב"><span class="mitzvah-number">ב</span><span class="mitzvah-text">יראת ה'</span></div>
+                            <div class="mitzvah-item" data-part="heart" data-info="ואהבת לרעך כמוך - כלל גדול בתורה"><span class="mitzvah-number">ג</span><span class="mitzvah-text">אהבת ישראל</span></div>
+                            <div class="mitzvah-item" data-part="heart" data-info="ואהבתם את הגר - לאהוב את הגר"><span class="mitzvah-number">ד</span><span class="mitzvah-text">אהבת הגר</span></div>
+                            <div class="mitzvah-item" data-part="heart" data-info="והלכת בדרכיו - מה הוא רחום אף אתה"><span class="mitzvah-number">ה</span><span class="mitzvah-text">הליכה בדרכי ה'</span></div>
+                            <div class="mitzvah-item" data-part="heart" data-info="ושבת עד ה' אלהיך - תשובה מעומק הלב"><span class="mitzvah-number">ו</span><span class="mitzvah-text">תשובה</span></div>
+                            <div class="mitzvah-item" data-part="heart" data-info="שמחה ביום טוב ובשבתות"><span class="mitzvah-number">ז</span><span class="mitzvah-text">שמחת יום טוב</span></div>
+                            <div class="mitzvah-item" data-part="heart" data-info="בטחון בה' - השלכת היהב על ה'"><span class="mitzvah-number">ח</span><span class="mitzvah-text">בטחון</span></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Hands - Women -->
+                    <div class="category-content" data-category="hands-w">
+                        <div class="mitzvot-grid">
+                            <div class="mitzvah-item" data-part="hands" data-info="פתוח תפתח את ידך - מצוות צדקה"><span class="mitzvah-number">א</span><span class="mitzvah-text">צדקה</span></div>
+                            <div class="mitzvah-item" data-part="hands" data-info="הפרשת חלה מהעיסה - מצווה מיוחדת לנשים"><span class="mitzvah-number">ב</span><span class="mitzvah-text">הפרשת חלה</span></div>
+                            <div class="mitzvah-item" data-part="hands" data-info="נטילת ידיים לפני אכילת לחם"><span class="mitzvah-number">ג</span><span class="mitzvah-text">נטילת ידיים</span></div>
+                            <div class="mitzvah-item" data-part="hands" data-info="להדליק נרות שבת וחג"><span class="mitzvah-number">ד</span><span class="mitzvah-text">הדלקת נרות</span></div>
+                            <div class="mitzvah-item" data-part="hands" data-info="לאפות חלות לכבוד שבת"><span class="mitzvah-number">ה</span><span class="mitzvah-text">אפיית חלות</span></div>
+                            <div class="mitzvah-item" data-part="hands" data-info="להפריש תרומות ומעשרות"><span class="mitzvah-number">ו</span><span class="mitzvah-text">הפרשת תרומה</span></div>
+                            <div class="mitzvah-item" data-part="hands" data-info="משלוח מנות בפורים"><span class="mitzvah-number">ז</span><span class="mitzvah-text">משלוח מנות</span></div>
+                            <div class="mitzvah-item" data-part="hands" data-info="מעשי חסד - ביקור חולים, הלבשת ערומים"><span class="mitzvah-number">ח</span><span class="mitzvah-text">גמילות חסדים</span></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Torso - Women -->
+                    <div class="category-content" data-category="torso-w">
+                        <div class="mitzvot-grid">
+                            <div class="mitzvah-item" data-part="torso" data-info="צניעות בלבוש - הנהגה יסודית לבנות ישראל"><span class="mitzvah-number">א</span><span class="mitzvah-text">צניעות</span></div>
+                            <div class="mitzvah-item" data-part="torso" data-info="בסוכות תשבו שבעת ימים - נשים חייבות"><span class="mitzvah-number">ב</span><span class="mitzvah-text">ישיבה בסוכה</span></div>
+                            <div class="mitzvah-item" data-part="torso" data-info="וכתבתם על מזוזות ביתך"><span class="mitzvah-number">ג</span><span class="mitzvah-text">מזוזה</span></div>
+                            <div class="mitzvah-item" data-part="torso" data-info="להדליק נר חנוכה - אף הן היו באותו הנס"><span class="mitzvah-number">ד</span><span class="mitzvah-text">נר חנוכה</span></div>
+                            <div class="mitzvah-item" data-part="torso" data-info="לעשות מעקה לגג - ולא תשים דמים בביתך"><span class="mitzvah-number">ה</span><span class="mitzvah-text">מעקה</span></div>
+                            <div class="mitzvah-item" data-part="torso" data-info="לא ילבש גבר שמלת אשה - שמירת ההבחנה"><span class="mitzvah-number">ו</span><span class="mitzvah-text">לבוש מתאים</span></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Home - Women -->
+                    <div class="category-content" data-category="home-w">
+                        <div class="mitzvot-grid">
+                            <div class="mitzvah-item" data-part="brit" data-info="הדלקת נרות שבת וחג - להכניס אור וקדושה לבית"><span class="mitzvah-number">א</span><span class="mitzvah-text">הדלקת נרות</span></div>
+                            <div class="mitzvah-item" data-part="brit" data-info="הפרשת חלה מהעיסה - זכר לתרומה"><span class="mitzvah-number">ב</span><span class="mitzvah-text">הפרשת חלה</span></div>
+                            <div class="mitzvah-item" data-part="brit" data-info="שמירת טהרת המשפחה - יסוד הבית היהודי"><span class="mitzvah-number">ג</span><span class="mitzvah-text">טהרת המשפחה</span></div>
+                            <div class="mitzvah-item" data-part="brit" data-info="טבילה במקווה - התחדשות וטהרה"><span class="mitzvah-number">ד</span><span class="mitzvah-text">טבילת נדה</span></div>
+                            <div class="mitzvah-item" data-part="brit" data-info="חינוך הילדים לתורה ומצוות"><span class="mitzvah-number">ה</span><span class="mitzvah-text">חינוך ילדים</span></div>
+                            <div class="mitzvah-item" data-part="brit" data-info="שלום בית - יסוד הבית היהודי"><span class="mitzvah-number">ו</span><span class="mitzvah-text">שלום בית</span></div>
+                            <div class="mitzvah-item" data-part="brit" data-info="כיבוד הורים - כבד את אביך ואת אמך"><span class="mitzvah-number">ז</span><span class="mitzvah-text">כיבוד הורים</span></div>
+                            <div class="mitzvah-item" data-part="brit" data-info="הכנסת אורחים - מגדולי המצוות"><span class="mitzvah-number">ח</span><span class="mitzvah-text">הכנסת אורחים</span></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Feet - Women -->
+                    <div class="category-content" data-category="feet-w">
+                        <div class="mitzvot-grid">
+                            <div class="mitzvah-item" data-part="feet" data-info="הליכה לבית הכנסת לתפילה"><span class="mitzvah-number">א</span><span class="mitzvah-text">הליכה לבית הכנסת</span></div>
+                            <div class="mitzvah-item" data-part="feet" data-info="ביקור חולים - הליכה לבקר החולה"><span class="mitzvah-number">ב</span><span class="mitzvah-text">ביקור חולים</span></div>
+                            <div class="mitzvah-item" data-part="feet" data-info="ללוות את המת לקבורה"><span class="mitzvah-number">ג</span><span class="mitzvah-text">ליווי המת</span></div>
+                            <div class="mitzvah-item" data-part="feet" data-info="הכנסת אורחים - לרוץ לקראתם"><span class="mitzvah-number">ד</span><span class="mitzvah-text">הכנסת אורחים</span></div>
+                            <div class="mitzvah-item" data-part="feet" data-info="ללוות את האורח בצאתו"><span class="mitzvah-number">ה</span><span class="mitzvah-text">ליווי אורחים</span></div>
+                            <div class="mitzvah-item" data-part="feet" data-info="הליכה לשמחות - חתונה, ברית"><span class="mitzvah-number">ו</span><span class="mitzvah-text">הליכה לשמחות</span></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- NEGATIVE MITZVOT - WOMEN -->
+                <div id="negative-content-women" class="tab-content">
+                    <div class="category-tabs" id="negative-tabs-women">
+                        <div class="category-tab negative-tab active" data-category="head-neg-w" onclick="switchCategory(this, 'negative-women')">
+                            <span class="category-icon">🧠</span> ראש
+                        </div>
+                        <div class="category-tab negative-tab" data-category="eyes-neg-w" onclick="switchCategory(this, 'negative-women')">
+                            <span class="category-icon">👁️</span> עיניים
+                        </div>
+                        <div class="category-tab negative-tab" data-category="ears-neg-w" onclick="switchCategory(this, 'negative-women')">
+                            <span class="category-icon">👂</span> אוזניים
+                        </div>
+                        <div class="category-tab negative-tab" data-category="mouth-neg-w" onclick="switchCategory(this, 'negative-women')">
+                            <span class="category-icon">👄</span> פה
+                        </div>
+                        <div class="category-tab negative-tab" data-category="heart-neg-w" onclick="switchCategory(this, 'negative-women')">
+                            <span class="category-icon">❤️</span> לב
+                        </div>
+                        <div class="category-tab negative-tab" data-category="hands-neg-w" onclick="switchCategory(this, 'negative-women')">
+                            <span class="category-icon">🤲</span> ידיים
+                        </div>
+                        <div class="category-tab negative-tab" data-category="torso-neg-w" onclick="switchCategory(this, 'negative-women')">
+                            <span class="category-icon">👕</span> גוף
+                        </div>
+                        <div class="category-tab negative-tab" data-category="home-neg-w" onclick="switchCategory(this, 'negative-women')">
+                            <span class="category-icon">🌸</span> טהרה
+                        </div>
+                        <div class="category-tab negative-tab" data-category="feet-neg-w" onclick="switchCategory(this, 'negative-women')">
+                            <span class="category-icon">🦶</span> רגליים
+                        </div>
+                    </div>
+                    
+                    <!-- Head Negative - Women -->
+                    <div class="category-content active" data-category="head-neg-w">
+                        <div class="mitzvot-grid">
+                            <div class="mitzvah-item negative-item" data-part="head" data-type="negative" data-info="לא יהיה לך אלהים אחרים על פני"><span class="mitzvah-number">א</span><span class="mitzvah-text">לא עבודה זרה</span></div>
+                            <div class="mitzvah-item negative-item" data-part="head" data-type="negative" data-info="לא תעשה לך פסל וכל תמונה"><span class="mitzvah-number">ב</span><span class="mitzvah-text">לא לעשות פסל</span></div>
+                            <div class="mitzvah-item negative-item" data-part="head" data-type="negative" data-info="לא תשתחווה להם ולא תעבדם"><span class="mitzvah-number">ג</span><span class="mitzvah-text">לא להשתחוות</span></div>
+                            <div class="mitzvah-item negative-item" data-part="head" data-type="negative" data-info="לא לחשוב מחשבות כפירה"><span class="mitzvah-number">ד</span><span class="mitzvah-text">לא מחשבות כפירה</span></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Eyes Negative - Women -->
+                    <div class="category-content" data-category="eyes-neg-w">
+                        <div class="mitzvot-grid">
+                            <div class="mitzvah-item negative-item" data-part="eyes" data-type="negative" data-info="ולא תתורו אחרי לבבכם ואחרי עיניכם"><span class="mitzvah-number">א</span><span class="mitzvah-text">לא תתורו</span></div>
+                            <div class="mitzvah-item negative-item" data-part="eyes" data-type="negative" data-info="לא להסתכל בדברים אסורים"><span class="mitzvah-number">ב</span><span class="mitzvah-text">שמירת עיניים</span></div>
+                            <div class="mitzvah-item negative-item" data-part="eyes" data-type="negative" data-info="לא תחמוד - לא לחמוד ברכוש חברתך"><span class="mitzvah-number">ג</span><span class="mitzvah-text">לא תחמוד</span></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Ears Negative - Women -->
+                    <div class="category-content" data-category="ears-neg-w">
+                        <div class="mitzvot-grid">
+                            <div class="mitzvah-item negative-item" data-part="ears" data-type="negative" data-info="לא תשא שמע שווא - לא לקבל לשון הרע"><span class="mitzvah-number">א</span><span class="mitzvah-text">לא לקבל לשון הרע</span></div>
+                            <div class="mitzvah-item negative-item" data-part="ears" data-type="negative" data-info="לא לשמוע קול זמר אסור"><span class="mitzvah-number">ב</span><span class="mitzvah-text">לא קול זמר</span></div>
+                            <div class="mitzvah-item negative-item" data-part="ears" data-type="negative" data-info="לא לשמוע לנביא שקר"><span class="mitzvah-number">ג</span><span class="mitzvah-text">לא לשמוע לנביא שקר</span></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Mouth Negative - Women -->
+                    <div class="category-content" data-category="mouth-neg-w">
+                        <div class="mitzvot-grid">
+                            <div class="mitzvah-item negative-item" data-part="mouth" data-type="negative" data-info="לא תשא את שם ה' אלהיך לשווא"><span class="mitzvah-number">א</span><span class="mitzvah-text">לא לשבועת שווא</span></div>
+                            <div class="mitzvah-item negative-item" data-part="mouth" data-type="negative" data-info="לא תענה ברעך עד שקר"><span class="mitzvah-number">ב</span><span class="mitzvah-text">לא עדות שקר</span></div>
+                            <div class="mitzvah-item negative-item" data-part="mouth" data-type="negative" data-info="לא תלך רכיל בעמיך"><span class="mitzvah-number">ג</span><span class="mitzvah-text">לא רכילות</span></div>
+                            <div class="mitzvah-item negative-item" data-part="mouth" data-type="negative" data-info="לא לדבר לשון הרע"><span class="mitzvah-number">ד</span><span class="mitzvah-text">לא לשון הרע</span></div>
+                            <div class="mitzvah-item negative-item" data-part="mouth" data-type="negative" data-info="לא תאכל כל חמץ - בפסח"><span class="mitzvah-number">ה</span><span class="mitzvah-text">לא לאכול חמץ</span></div>
+                            <div class="mitzvah-item negative-item" data-part="mouth" data-type="negative" data-info="לא תאכלו על הדם"><span class="mitzvah-number">ו</span><span class="mitzvah-text">לא לאכול דם</span></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Heart Negative - Women -->
+                    <div class="category-content" data-category="heart-neg-w">
+                        <div class="mitzvot-grid">
+                            <div class="mitzvah-item negative-item" data-part="heart" data-type="negative" data-info="לא תשנא את אחיך בלבבך"><span class="mitzvah-number">א</span><span class="mitzvah-text">לא תשנא</span></div>
+                            <div class="mitzvah-item negative-item" data-part="heart" data-type="negative" data-info="לא תקום ולא תטור"><span class="mitzvah-number">ב</span><span class="mitzvah-text">לא נקימה ונטירה</span></div>
+                            <div class="mitzvah-item negative-item" data-part="heart" data-type="negative" data-info="לא תחמוד"><span class="mitzvah-number">ג</span><span class="mitzvah-text">לא תחמוד</span></div>
+                            <div class="mitzvah-item negative-item" data-part="heart" data-type="negative" data-info="לא תתאווה - לא להתאוות לרכוש הזולת"><span class="mitzvah-number">ד</span><span class="mitzvah-text">לא תתאווה</span></div>
+                            <div class="mitzvah-item negative-item" data-part="heart" data-type="negative" data-info="לא יקשה את לבבו - מפני העני"><span class="mitzvah-number">ה</span><span class="mitzvah-text">לא להקשות לב</span></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Hands Negative - Women -->
+                    <div class="category-content" data-category="hands-neg-w">
+                        <div class="mitzvot-grid">
+                            <div class="mitzvah-item negative-item" data-part="hands" data-type="negative" data-info="לא תגנוב"><span class="mitzvah-number">א</span><span class="mitzvah-text">לא תגנוב</span></div>
+                            <div class="mitzvah-item negative-item" data-part="hands" data-type="negative" data-info="לא תעשוק את רעך"><span class="mitzvah-number">ב</span><span class="mitzvah-text">לא לעשוק</span></div>
+                            <div class="mitzvah-item negative-item" data-part="hands" data-type="negative" data-info="לא תקפוץ את ידך מאחיך האביון"><span class="mitzvah-number">ג</span><span class="mitzvah-text">לא לקפוץ יד</span></div>
+                            <div class="mitzvah-item negative-item" data-part="hands" data-type="negative" data-info="לא לעשות מלאכה בשבת"><span class="mitzvah-number">ד</span><span class="mitzvah-text">לא מלאכה בשבת</span></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Torso Negative - Women -->
+                    <div class="category-content" data-category="torso-neg-w">
+                        <div class="mitzvot-grid">
+                            <div class="mitzvah-item negative-item" data-part="torso" data-type="negative" data-info="לא ילבש גבר שמלת אשה - שעטנז"><span class="mitzvah-number">א</span><span class="mitzvah-text">לא שעטנז</span></div>
+                            <div class="mitzvah-item negative-item" data-part="torso" data-type="negative" data-info="לא ללבוש בגדי גבר"><span class="mitzvah-number">ב</span><span class="mitzvah-text">לא בגדי גבר</span></div>
+                            <div class="mitzvah-item negative-item" data-part="torso" data-type="negative" data-info="לא לגלות שיער לאישה נשואה"><span class="mitzvah-number">ג</span><span class="mitzvah-text">לא לגלות שיער</span></div>
+                            <div class="mitzvah-item negative-item" data-part="torso" data-type="negative" data-info="לא להתקשט לפני גברים זרים"><span class="mitzvah-number">ד</span><span class="mitzvah-text">לא פריצות</span></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Home Negative - Women -->
+                    <div class="category-content" data-category="home-neg-w">
+                        <div class="mitzvot-grid">
+                            <div class="mitzvah-item negative-item" data-part="brit" data-type="negative" data-info="לא לקרב לאישה נדה"><span class="mitzvah-number">א</span><span class="mitzvah-text">לא לקרב בנדה</span></div>
+                            <div class="mitzvah-item negative-item" data-part="brit" data-type="negative" data-info="לא להשהות חמץ בבית"><span class="mitzvah-number">ב</span><span class="mitzvah-text">לא חמץ בבית</span></div>
+                            <div class="mitzvah-item negative-item" data-part="brit" data-type="negative" data-info="לא תונו איש את עמיתו - הונאה במסחר"><span class="mitzvah-number">ג</span><span class="mitzvah-text">לא הונאה</span></div>
+                            <div class="mitzvah-item negative-item" data-part="brit" data-type="negative" data-info="לא לקלל אב ואם"><span class="mitzvah-number">ד</span><span class="mitzvah-text">לא לקלל הורים</span></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Feet Negative - Women -->
+                    <div class="category-content" data-category="feet-neg-w">
+                        <div class="mitzvot-grid">
+                            <div class="mitzvah-item negative-item" data-part="feet" data-type="negative" data-info="לא תלך רכיל בעמיך"><span class="mitzvah-number">א</span><span class="mitzvah-text">לא תלך רכיל</span></div>
+                            <div class="mitzvah-item negative-item" data-part="feet" data-type="negative" data-info="לא ללכת בחוקות הגויים"><span class="mitzvah-number">ב</span><span class="mitzvah-text">לא בחוקות הגויים</span></div>
+                            <div class="mitzvah-item negative-item" data-part="feet" data-type="negative" data-info="לא ללכת למקומות אסורים"><span class="mitzvah-number">ג</span><span class="mitzvah-text">לא למקומות אסורים</span></div>
+                            <div class="mitzvah-item negative-item" data-part="feet" data-type="negative" data-info="לא ללכת בדרך רשעים"><span class="mitzvah-number">ד</span><span class="mitzvah-text">לא בדרך רשעים</span></div>
+                        </div>
+                    </div>
+                </div>
+                </div><!-- End women-mitzvot -->
+                
+                <!-- Info Panel -->
+                <div class="info-panel" id="info-panel">
+                    <h3>בחר מצווה או לחץ על איבר</h3>
+                    <p>לחץ על מצווה כדי להאיר את האיבר המתאים, או לחץ על איבר בגוף כדי לראות את המצוות הקשורות אליו</p>
+                    <p class="source">"רמ"ח מצוות עשה כנגד רמ"ח איברים, שס"ה לא תעשה כנגד שס"ה גידים" (זוהר)</p>
+                </div>
+                
+                <!-- Tracking Section -->
+                <div class="tracking-section">
+                    <div class="tracking-header">
+                        <div class="tracking-title">
+                            ✨ מצוות שקיימתי היום:
+                        </div>
+                        <div class="tracking-date" id="today-date"></div>
+                    </div>
+                    
+                    <!-- Notebook input area -->
+                    <div class="notebook-container">
+                        <div class="notebook-input-wrapper">
+                            <textarea class="notebook-input" id="mitzvah-input" placeholder="כתוב כאן את המצוות שקיימת היום..."></textarea>
+                        </div>
+                    </div>
+                    
+                    <!-- Save button -->
+                    <button class="save-btn" id="save-btn" onclick="saveWrittenMitzvah()">
+                        💾 שמור
+                    </button>
+                    
+                    <!-- Saved items list -->
+                    <div class="saved-title" id="saved-title" style="display: none;">📋 נשמר:</div>
+                    <div class="saved-mitzvot-container" id="saved-container" style="display: none;">
+                        <div class="saved-mitzvot-list" id="saved-list"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>💫 "על ידי קיום מצוות עשה נמשך אור עליון • על ידי שמירת לא תעשה נמשכים אורות גבוהים יותר" 💫</p>
+    </footer>
+    
+    <script>
+        // DOCUMENT-LEVEL CLICK HANDLER
+        document.addEventListener('click', function(event) {
+            // Check if clicked on mitzvah item or its children
+            var mitzvahItem = event.target.closest('.mitzvah-item');
+            if (mitzvahItem) {
+                var partName = mitzvahItem.getAttribute('data-part');
+                if (!partName) return;
+                
+                var isNegative = mitzvahItem.classList.contains('negative-item');
+                var className = isNegative ? 'active-negative' : 'active-positive';
+                
+                // Clear ALL body part highlights
+                var allParts = document.querySelectorAll('.body-part');
+                for (var i = 0; i < allParts.length; i++) {
+                    allParts[i].classList.remove('active-positive', 'active-negative');
+                }
+                
+                // Light up the matching body parts
+                for (var i = 0; i < allParts.length; i++) {
+                    if (allParts[i].getAttribute('data-part') === partName) {
+                        allParts[i].classList.add(className);
+                    }
+                }
+                
+                // Update mitzvah selection
+                var allMitzvot = document.querySelectorAll('.mitzvah-item');
+                for (var i = 0; i < allMitzvot.length; i++) {
+                    allMitzvot[i].classList.remove('selected');
+                }
+                mitzvahItem.classList.add('selected');
+                return;
+            }
+            
+            // Check if clicked on category tab (body part names at bottom)
+            var categoryTab = event.target.closest('.category-tab');
+            if (categoryTab) {
+                var category = categoryTab.getAttribute('data-category');
+                if (!category) return;
+                
+                // Extract base part name from category (remove -neg, -w, -neg-w suffixes)
+                var partName = category.replace(/-neg-w$/, '').replace(/-neg$/, '').replace(/-w$/, '');
+                
+                // Map women's category names to body part names
+                var womenToBodyPart = {
+                    'home': 'brit'
+                };
+                if (womenToBodyPart[partName]) {
+                    partName = womenToBodyPart[partName];
+                }
+                
+                // Determine if negative based on category name or tab class
+                var isNegative = category.indexOf('-neg') !== -1 || categoryTab.classList.contains('negative-tab');
+                var className = isNegative ? 'active-negative' : 'active-positive';
+                
+                // Clear ALL body part highlights
+                var allParts = document.querySelectorAll('.body-part');
+                for (var i = 0; i < allParts.length; i++) {
+                    allParts[i].classList.remove('active-positive', 'active-negative');
+                }
+                
+                // Light up the matching body parts
+                for (var i = 0; i < allParts.length; i++) {
+                    if (allParts[i].getAttribute('data-part') === partName) {
+                        allParts[i].classList.add(className);
+                    }
+                }
+                return;
+            }
+            
+            // Check if clicked on body part
+            var bodyPart = event.target.closest('.body-part');
+            if (bodyPart) {
+                var partName = bodyPart.getAttribute('data-part');
+                if (!partName) return;
+                
+                var isNegative = (typeof currentMode !== 'undefined') && currentMode === 'negative';
+                var className = isNegative ? 'active-negative' : 'active-positive';
+                var isCurrentlyActive = bodyPart.classList.contains(className);
+                
+                // Clear all body part highlights
+                var allParts = document.querySelectorAll('.body-part');
+                for (var i = 0; i < allParts.length; i++) {
+                    allParts[i].classList.remove('active-positive', 'active-negative');
+                }
+                
+                if (!isCurrentlyActive) {
+                    // Light up matching body parts
+                    for (var i = 0; i < allParts.length; i++) {
+                        if (allParts[i].getAttribute('data-part') === partName) {
+                            allParts[i].classList.add(className);
+                        }
+                    }
+                }
+                
+                // Switch to the correct category tab
+                if (typeof currentGender === 'undefined' || typeof currentMode === 'undefined' || typeof switchCategory !== 'function') return;
+                
+                var tabsId = currentGender === 'women' 
+                    ? currentMode + '-tabs-women' 
+                    : currentMode + '-tabs';
+                
+                var categoryPartName = partName;
+                if (currentGender === 'women') {
+                    var womenPartMapping = {
+                        'brit': 'home',
+                        'neck': 'head',
+                        'arms': 'hands',
+                        'legs': 'feet'
+                    };
+                    categoryPartName = womenPartMapping[partName] || partName;
+                }
+                
+                var categoryName;
+                if (currentGender === 'women') {
+                    categoryName = currentMode === 'positive' 
+                        ? categoryPartName + '-w' 
+                        : categoryPartName + '-neg-w';
+                } else {
+                    categoryName = currentMode === 'positive' 
+                        ? partName 
+                        : partName + '-neg';
+                }
+                
+                var tabContainer = document.getElementById(tabsId);
+                var categoryTab = tabContainer ? tabContainer.querySelector('[data-category="' + categoryName + '"]') : null;
+                
+                if (categoryTab) {
+                    var modeForSwitch = currentGender === 'women' 
+                        ? (currentMode === 'positive' ? 'positive-women' : 'negative-women')
+                        : currentMode;
+                    switchCategory(categoryTab, modeForSwitch);
+                }
+                return;
+            }
+        });
+        
+        let currentMode = 'positive';
+        let activeItems = new Set();
+        let savedMitzvot = [];
+        
+        // Get today's date in Hebrew format
+        function getTodayDate() {
+            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            return new Date().toLocaleDateString('he-IL', options);
+        }
+        
+        // Get today's date key for storage
+        function getTodayKey() {
+            return new Date().toISOString().split('T')[0];
+        }
+        
+        // Load saved mitzvot from localStorage
+        function loadSavedMitzvot() {
+            const todayKey = getTodayKey();
+            const stored = localStorage.getItem('mitzvot_' + todayKey);
+            if (stored) {
+                savedMitzvot = JSON.parse(stored);
+            } else {
+                savedMitzvot = [];
+            }
+            renderSavedMitzvot();
+        }
+        
+        // Save mitzvot to localStorage
+        function saveMitzvotToStorage() {
+            const todayKey = getTodayKey();
+            localStorage.setItem('mitzvot_' + todayKey, JSON.stringify(savedMitzvot));
+        }
+        
+        // Save written mitzvah from textarea
+        function saveWrittenMitzvah() {
+            const input = document.getElementById('mitzvah-input');
+            const text = input.value.trim();
+            
+            if (!text) return;
+            
+            // Split by new lines to save multiple items
+            const lines = text.split('\n').filter(line => line.trim());
+            
+            lines.forEach(line => {
+                const trimmedLine = line.trim();
+                if (trimmedLine) {
+                    savedMitzvot.push({
+                        name: trimmedLine,
+                        isNegative: false,
+                        time: new Date().toLocaleTimeString('he-IL', { hour: '2-digit', minute: '2-digit' })
+                    });
+                }
+            });
+            
+            input.value = '';
+            saveMitzvotToStorage();
+            renderSavedMitzvot();
+        }
+        
+        // Save selected mitzvot (from clicking on mitzvah items)
+        function saveSelectedMitzvot() {
+            document.querySelectorAll('.mitzvah-item.selected').forEach(item => {
+                const name = item.querySelector('.mitzvah-text').textContent;
+                const isNegative = item.classList.contains('negative-item');
+                const part = item.dataset.part;
+                
+                // Check if already saved
+                const exists = savedMitzvot.some(m => m.name === name);
+                if (!exists) {
+                    savedMitzvot.push({
+                        name: name,
+                        isNegative: isNegative,
+                        part: part,
+                        time: new Date().toLocaleTimeString('he-IL', { hour: '2-digit', minute: '2-digit' })
+                    });
+                }
+            });
+            
+            saveMitzvotToStorage();
+            renderSavedMitzvot();
+            clearAllActiveStates();
+        }
+        
+        // Delete a saved mitzvah
+        function deleteSavedMitzvah(index) {
+            savedMitzvot.splice(index, 1);
+            saveMitzvotToStorage();
+            renderSavedMitzvot();
+        }
+        
+        // Render saved mitzvot list
+        function renderSavedMitzvot() {
+            const list = document.getElementById('saved-list');
+            const container = document.getElementById('saved-container');
+            const title = document.getElementById('saved-title');
+            
+            if (savedMitzvot.length === 0) {
+                list.innerHTML = '';
+                container.style.display = 'none';
+                title.style.display = 'none';
+                return;
+            }
+            
+            container.style.display = 'block';
+            title.style.display = 'flex';
+            
+            list.innerHTML = savedMitzvot.map((m, index) => `
+                <div class="saved-mitzvah-row">
+                    <div class="row-content">
+                        <span class="tag-icon">${m.isNegative ? '🚫' : '✅'}</span>
+                        <span class="mitzvah-name">${m.name}</span>
+                        <span class="mitzvah-time">(${m.time})</span>
+                    </div>
+                    <button class="delete-btn" onclick="deleteSavedMitzvah(${index})" title="מחק">✕</button>
+                </div>
+            `).join('');
+        }
+        
+        // Initialize date and load saved
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('today-date').textContent = getTodayDate();
+            loadSavedMitzvot();
+        });
+        
+        // Switch main tabs (positive/negative)
+        let currentGender = 'men';
+        
+        function switchGender(gender) {
+            currentGender = gender;
+            
+            // Update gender tab styling
+            document.querySelectorAll('.gender-tab').forEach(tab => tab.classList.remove('active'));
+            document.querySelector(`.gender-tab[data-gender="${gender}"]`).classList.add('active');
+            
+            // Show/hide gender content
+            document.getElementById('men-mitzvot').style.display = gender === 'men' ? 'block' : 'none';
+            document.getElementById('women-mitzvot').style.display = gender === 'women' ? 'block' : 'none';
+            
+            // Switch body image
+            const bodyContainer = document.querySelector('.body-image-container');
+            if (gender === 'women') {
+                bodyContainer.classList.add('women-active');
+            } else {
+                bodyContainer.classList.remove('women-active');
+            }
+            
+            // Update brit title for hover
+            const britPart = document.querySelector('.part-brit');
+            if (britPart) {
+                britPart.title = gender === 'women' ? 'בית ומשפחה' : 'ברית';
+            }
+            
+            // Update notebook placeholder for gender
+            const notebookInput = document.getElementById('mitzvah-input');
+            if (notebookInput) {
+                notebookInput.placeholder = gender === 'women' 
+                    ? 'כתבי כאן את המצוות שקיימת היום...'
+                    : 'כתוב כאן את המצוות שקיימת היום...';
+            }
+            
+            // Update main tabs text
+            if (gender === 'men') {
+                document.querySelector('.main-tab.positive').innerHTML = '🌟 רמ"ח מצוות עשה (248)';
+                document.querySelector('.main-tab.negative').innerHTML = '🚫 שס"ה מצוות לא תעשה (365)';
+            } else {
+                document.querySelector('.main-tab.positive').innerHTML = '🌟 מצוות עשה לנשים';
+                document.querySelector('.main-tab.negative').innerHTML = '🚫 מצוות לא תעשה';
+            }
+            
+            // Reset to positive tab
+            switchMainTab('positive');
+            
+            // Clear active states
+            clearAllActiveStates();
+        }
+        
+        function switchMainTab(mode) {
+            currentMode = mode;
+            
+            // Update tab styling
+            document.querySelectorAll('.main-tab').forEach(tab => tab.classList.remove('active'));
+            document.querySelector(`.main-tab.${mode}`).classList.add('active');
+            
+            // Show/hide content based on gender
+            const suffix = currentGender === 'women' ? '-women' : '';
+            document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+            document.getElementById(`${mode}-content${suffix}`).classList.add('active');
+            
+            // Update body title
+            const title = mode === 'positive' ? '🕯️ איברי האדם 🕯️' : '🔥 גידי האדם 🔥';
+            document.getElementById('body-title').textContent = title;
+            
+            // Clear active states
+            clearAllActiveStates();
+        }
+        
+        // Switch category tabs
+        function switchCategory(tab, mode) {
+            // Handle women's mode suffixes
+            let tabsId = `${mode}-tabs`;
+            let contentId = `${mode}-content`;
+            
+            // For women's categories
+            if (mode === 'positive-women') {
+                tabsId = 'positive-tabs-women';
+                contentId = 'positive-content-women';
+            } else if (mode === 'negative-women') {
+                tabsId = 'negative-tabs-women';
+                contentId = 'negative-content-women';
+            }
+            
+            const tabsContainer = document.getElementById(tabsId);
+            const contentContainer = document.getElementById(contentId);
+            
+            if (!tabsContainer || !contentContainer) return;
+            
+            // Update tab styling
+            tabsContainer.querySelectorAll('.category-tab').forEach(t => t.classList.remove('active'));
+            tab.classList.add('active');
+            
+            // Show/hide category content
+            const category = tab.dataset.category;
+            contentContainer.querySelectorAll('.category-content').forEach(content => {
+                content.classList.remove('active');
+                if (content.dataset.category === category) {
+                    content.classList.add('active');
+                }
+            });
+            
+            // Scroll the tab into view
+            tab.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+            
+            // Scroll to the mitzvot container on mobile
+            if (window.innerWidth <= 900) {
+                const mitzvotContainer = document.querySelector('.mitzvot-container');
+                if (mitzvotContainer) {
+                    setTimeout(() => {
+                        mitzvotContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }, 100);
+                }
+            }
+        }
+        
+        // Clear all active states
+        function clearAllActiveStates() {
+            document.querySelectorAll('.body-part').forEach(part => {
+                part.classList.remove('active-positive', 'active-negative');
+            });
+            document.querySelectorAll('.mitzvah-item').forEach(item => {
+                item.classList.remove('selected');
+            });
+            activeItems.clear();
+            updateInfoPanel(null);
+        }
+        
+        // Toggle body part activation
+        function setBodyPartActive(partName, isNegative, active) {
+            const className = isNegative ? 'active-negative' : 'active-positive';
+            const parts = document.querySelectorAll(`.body-part[data-part="${partName}"]`);
+            
+            parts.forEach(part => {
+                if (active) {
+                    part.classList.add(className);
+                } else {
+                    part.classList.remove(className);
+                }
+            });
+        }
+        
+        // Get Hebrew name for body part
+        function getPartHebrew(part) {
+            const names = {
+                'head': 'ראש ומוח',
+                'eyes': 'עיניים',
+                'ears': 'אוזניים',
+                'mouth': 'פה ושפתיים',
+                'neck': 'צוואר',
+                'heart': 'לב',
+                'arms': 'זרועות',
+                'hands': 'ידיים',
+                'torso': 'גוף',
+                'lower': 'גוף תחתון',
+                'brit': currentGender === 'women' ? 'בית ומשפחה' : 'ברית',
+                'legs': 'רגליים',
+                'feet': 'כפות רגליים'
+            };
+            return names[part] || part;
+        }
+        
+        // Update info panel
+        function updateInfoPanel(data) {
+            const panel = document.getElementById('info-panel');
+            
+            if (!data) {
+                panel.innerHTML = `
+                    <h3>בחר מצווה או לחץ על איבר</h3>
+                    <p>לחץ על מצווה כדי להאיר את האיבר המתאים, או לחץ על איבר בגוף כדי לראות את המצוות הקשורות אליו</p>
+                    <p class="source">"רמ"ח מצוות עשה כנגד רמ"ח איברים, שס"ה לא תעשה כנגד שס"ה גידים"</p>
+                `;
+                return;
+            }
+            
+            if (data.type === 'mitzvah') {
+                const icon = data.isNegative ? '🚫' : '🕯️';
+                panel.innerHTML = `
+                    <h3>${icon} ${data.name} ${icon}</h3>
+                    <p>${data.info}</p>
+                    <p class="source">האיבר/גיד: ${getPartHebrew(data.part)}</p>
+                `;
+            } else if (data.type === 'bodyPart') {
+                const icon = currentMode === 'negative' ? '🔥' : '🕯️';
+                panel.innerHTML = `
+                    <h3>${icon} ${getPartHebrew(data.part)} ${icon}</h3>
+                    <p>מצוות הקשורות ל${getPartHebrew(data.part)}: ${data.mitzvot.join('، ')}</p>
+                    <p class="source">לחץ על מצווה ספציפית לפרטים נוספים</p>
+                `;
+            }
+        }
+        
+        // Functions moved to top of script
+    </script>
+</body>
+</html>
